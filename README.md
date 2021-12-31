@@ -3,19 +3,19 @@
 # Pixeed is an javafx, opencv based photo editing software which is enriched with functionalities listed below.
 
 # Pixeed Images
-
+-Special Effect 
 ![alt text](https://github.com/Chitra-Maker/Pixeed/blob/main/Screenshot%20(26).png?raw=true)
-
+-Lasso Selection
 ![alt text](https://github.com/Chitra-Maker/Pixeed/blob/main/Screenshot%20(34).png?raw=true)
-
+-Free Selection Crop
 ![alt text](https://github.com/Chitra-Maker/Pixeed/blob/main/Screenshot%20(35).png?raw=true)
-
+-Background Changing of cropped Image
 ![alt text](https://github.com/Chitra-Maker/Pixeed/blob/main/Screenshot%20(36).png?raw=true)
-
+-Text Emoji Brush
 ![alt text](https://github.com/Chitra-Maker/Pixeed/blob/main/Screenshot%20(37).png?raw=true)
-
+-Layers Preserve Ratio by blurring sides
 ![alt text](https://github.com/Chitra-Maker/Pixeed/blob/main/Screenshot%20(38).png?raw=true)
-
+-Red Eye Correction
 ![alt text](https://github.com/Chitra-Maker/Pixeed/blob/main/Screenshot%20(39).png?raw=true)
 
 # Pixeed Functionalities :)
