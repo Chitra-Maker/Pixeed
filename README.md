@@ -63,8 +63,8 @@ It provides a platform to the young engineers and managers
 to hone their techno-managerial skills on a much branded canvas. 
 
 ### ACHIEVEMENT
-#### My team "HIDDEN" got "2nd Rank" in Softablitz(java based Software Development) event
-#### which comes under Cyberquest of [AVISHKAR](https://avishkar.mnnit.ac.in/)
+##### My team "HIDDEN" got "2nd Rank" in Softablitz(java based Software Development) event
+##### which comes under Cyberquest of [AVISHKAR](https://avishkar.mnnit.ac.in/)
 
 
 ### Team Name : HIDDEN 
