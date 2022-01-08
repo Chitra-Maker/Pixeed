@@ -707,7 +707,7 @@
                               <Font name="System Bold" size="12.0" />
                           </font>
                       </Label>
-                  <JFXButton layoutX="208.0" layoutY="20.0" onAction="#smoothingButtonPressed" prefHeight="27.0" prefWidth="42.0" style="-fx-background-color: #262626;;" textFill="WHITE">
+                  <JFXButton layoutX="220.0" layoutY="20.0" onAction="#smoothingButtonPressed" prefHeight="27.0" prefWidth="42.0" style="-fx-background-color: #262626;;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="1.0" />
                      </font>
@@ -722,12 +722,29 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <Label layoutX="205.0" layoutY="50.0" prefHeight="25.0" prefWidth="47.0" text="Smooth" textFill="WHITE">
+                  <Label layoutX="217.0" layoutY="54.0" prefHeight="25.0" prefWidth="47.0" text="Smooth" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <JFXSlider fx:id="smoothingSlider" disable="true" layoutX="89.0" layoutY="33.0" majorTickUnit="5.0" max="31.0" min="1.0" prefHeight="34.0" prefWidth="115.0" showTickLabels="true" showTickMarks="true" value="15.5" />
+                  <JFXSlider fx:id="smoothingSlider" disable="true" layoutX="113.0" layoutY="33.0" majorTickUnit="5.0" max="31.0" min="1.0" prefHeight="37.0" prefWidth="91.0" showTickLabels="true" showTickMarks="true" value="15.5" />
+                  <JFXButton layoutX="64.0" layoutY="17.0" onAction="#pickColor" prefHeight="27.0" prefWidth="42.0" style="-fx-background-color: #262626;;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/picker.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="55.0" layoutY="58.0" text="Color Picker" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
                     </children>
                 </AnchorPane>
                 <JFXButton layoutX="2.0" layoutY="239.0" onAction="#cropButtonPressed" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #262626;" text="Crop" textFill="WHITE">

@@ -35,12 +35,14 @@ import javafx.scene.transform.Translate;
 import javafx.stage.FileChooser;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
+import org.opencv.core.Scalar;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Stack;
@@ -657,6 +659,42 @@ public class Controller implements Initializable {
     }
 
     public void redoButtonPressed(ActionEvent actionEvent) {
+    }
+
+    public void pickColor() throws FileNotFoundException {
+
+        PickColor pickColor = new PickColor(activeImageView, file);
+        double ratio1 = pickColor.ratio1;
+        double ratio2 = pickColor.ratio2;
+        double ratio = Math.max(ratio2, ratio1);
+        Mat mat = pickColor.matrix;
+        final Mat[] tmpimage = {new Mat()};
+        ImageView imageView = new ImageView();
+        imageViewPane.getChildren().add(imageView);
+        System.out.println(activeImageView.getFitHeight()+" "+activeImageView.getFitWidth());
+        System.out.println(activeImageView.getImage().getHeight()+" "+activeImageView.getImage().getWidth());
+        activeImageView.setOnMouseMoved(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                int x = (int) ((int) ratio * (mouseEvent.getSceneX() - activeImageView.getLayoutX()));
+                int y = (int) ((int) ratio * (mouseEvent.getSceneY() - activeImageView.getLayoutY()));
+                double arr[] = mat.get(x, y);
+////                for (int i = 0; i < arr.length; i++)
+////                    System.out.print(arr[i] + " ");
+//                    Scalar scalar = new Scalar((int)arr[2],(int) arr[1],(int) arr[0]);
+//                System.out.println(scalar);
+                System.out.println(arr[2] + " " + arr[1] + " " + arr[0]);
+                tmpimage[0] = new Mat(200, 200, mat.type(), new Scalar(arr[0], arr[1], arr[2]));
+                PickColor.showResult(tmpimage[0], imageViewPane, imageView);
+//                System.out.println();
+            }
+        });
+        activeImageView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                RedEyeCorrection.showResult(tmpimage[0], activeImageView);
+            }
+        });
     }
 }
 
